@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INDOX AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       background: url('background.webp') no-repeat center center;
       background-size: cover;
-      height: 100vh;
       margin: 0;
+      /* Remove fixed height to allow content to flow */
     }
   </style>
 </head>
-<body>
-  <div class="absolute inset-0 top-20 flex justify-center items-center grow">
+<body class="flex flex-col min-h-screen">
+  <!-- Header Section with Logo and Input -->
+  <div class="flex flex-col justify-center items-center flex-grow pt-20">
     <div>
       <!-- INDOX Outline Logo -->
       <div style="opacity: 1; transform: none;">
@@ -26,7 +27,7 @@
           height="779"
           decoding="async"
           class="max-w-screen sm:max-w-full xl:max-w-5xl pointer-events-none select-none"
-          style="color:transparent;mask-image:linear-gradient(30deg, rgba(255,255,255,0) 15%, rgba(255,255,255, 1), rgba(255,255,255, 1))"
+          style="color: transparent; mask-image: linear-gradient(30deg, rgba(255,255,255,0) 15%, rgba(255,255,255, 1), rgba(255,255,255, 1))"
           src="indox-outline.webp"
         />
       </div>
@@ -56,61 +57,62 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bottom AI message section -->
-  <div class="absolute bottom-0 left-0 right-0 px-6 py-10 z-10">
-    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-6 lg:min-h-[160px] text-white">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 my-2">
-          <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/>
-        </svg>
-      </div>
-      <div class="max-w-lg text-center lg:text-left">
-        <p class="text-sm sm:text-base font-light">We are thrilled to unveil Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.</p>
+    <!-- Bottom AI message section -->
+    <div class="px-6 py-10 text-white">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:min-h-[160px]">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 my-2">
+            <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="max-w-lg text-center lg:text-left">
+          <p class="text-sm sm:text-base font-light">We are thrilled to unveil Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.</p>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- New Section -->
+  <section class="py-20 sm:py-32 bg-black text-white">
+    <div class="mx-auto w-full px-6 xl:max-w-7xl space-y-20">
+      <div class="text-center space-y-4">
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Meet INDOX: AI for Everyone</h2>
+        <p class="text-lg text-gray-400">Smart, Human-friendly AI tools — built to empower your ideas.</p>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Box 1: Ask INDOX -->
+        <div class="group p-8 border border-white/10 hover:bg-white/5 rounded-xl transition duration-200 overflow-hidden relative">
+          <div class="text-xl font-semibold mb-4">Ask INDOX Anything</div>
+          <p class="text-gray-400 mb-6">Your intelligent guide for creative help, questions, and ideas — now just a message away.</p>
+          <div class="w-full h-32 bg-white/5 rounded-lg group-hover:scale-105 transition duration-300"></div>
+          <div class="mt-6 flex justify-end">
+            <a href="#" class="text-sm font-mono uppercase border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">Use Now</a>
+          </div>
+        </div>
+
+        <!-- Box 2: Build with INDOX -->
+        <div class="group p-8 border border-white/10 hover:bg-white/5 rounded-xl transition duration-200 overflow-hidden relative">
+          <div class="text-xl font-semibold mb-4">Build AI Tools</div>
+          <p class="text-gray-400 mb-6">Speed up your development with INDOX APIs and creative automation tools.</p>
+          <canvas class="w-full h-32 bg-black rounded-lg opacity-40 group-hover:opacity-80 transition duration-300"></canvas>
+          <div class="mt-6 flex justify-end">
+            <a href="#" class="text-sm font-mono uppercase border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">Build Now</a>
+          </div>
+        </div>
+
+        <!-- Box 3: Learn with INDOX -->
+        <div class="group p-8 border border-white/10 hover:bg-white/5 rounded-xl transition duration-200 overflow-hidden relative">
+          <div class="text-xl font-semibold mb-4">Explore Knowledge</div>
+          <p class="text-gray-400 mb-6">Get access to docs, use-case guides, and onboarding tips — made easy.</p>
+          <div class="w-full h-32 bg-white/5 rounded-lg group-hover:-rotate-1 group-hover:scale-105 transition duration-300"></div>
+          <div class="mt-6 flex justify-end">
+            <a href="#" class="text-sm font-mono uppercase border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
-    <section class="py-20 sm:py-32 bg-black text-white">
-  <div class="mx-auto w-full px-6 xl:max-w-7xl space-y-20">
-    <div class="text-center space-y-4">
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Meet INDOX: AI for Everyone</h2>
-      <p class="text-lg text-gray-400">Smart, Human-friendly AI tools — built to empower your ideas.</p>
-    </div>
-
-    <div class="grid gap-8 lg:grid-cols-3">
-      <!-- Box 1: Ask INDOX -->
-      <div class="group p-8 border border-white/10 hover:bg-white/5 rounded-xl transition duration-200 overflow-hidden relative">
-        <div class="text-xl font-semibold mb-4">Ask INDOX Anything</div>
-        <p class="text-gray-400 mb-6">Your intelligent guide for creative help, questions, and ideas — now just a message away.</p>
-        <div class="w-full h-32 bg-white/5 rounded-lg group-hover:scale-105 transition duration-300"></div>
-        <div class="mt-6 flex justify-end">
-          <a href="#" class="text-sm font-mono uppercase border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">Use Now</a>
-        </div>
-      </div>
-
-      <!-- Box 2: Build with INDOX -->
-      <div class="group p-8 border border-white/10 hover:bg-white/5 rounded-xl transition duration-200 overflow-hidden relative">
-        <div class="text-xl font-semibold mb-4">Build AI Tools</div>
-        <p class="text-gray-400 mb-6">Speed up your development with INDOX APIs and creative automation tools.</p>
-        <canvas class="w-full h-32 bg-black rounded-lg opacity-40 group-hover:opacity-80 transition duration-300"></canvas>
-        <div class="mt-6 flex justify-end">
-          <a href="#" class="text-sm font-mono uppercase border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">Build Now</a>
-        </div>
-      </div>
-
-      <!-- Box 3: Learn with INDOX -->
-      <div class="group p-8 border border-white/10 hover:bg-white/5 rounded-xl transition duration-200 overflow-hidden relative">
-        <div class="text-xl font-semibold mb-4">Explore Knowledge</div>
-        <p class="text-gray-400 mb-6">Get access to docs, use-case guides, and onboarding tips — made easy.</p>
-        <div class="w-full h-32 bg-white/5 rounded-lg group-hover:-rotate-1 group-hover:scale-105 transition duration-300"></div>
-        <div class="mt-6 flex justify-end">
-          <a href="#" class="text-sm font-mono uppercase border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-    </section>
 </html>
