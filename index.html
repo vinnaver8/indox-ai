@@ -71,5 +71,71 @@
       </div>
     </div>
   </div>
+  <!-- Uno AI - Animated Interactive Section (Grok-style) --><section class="py-20 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold">INDOX AI Toolkit</h2>
+      <p class="mt-4 text-gray-400">Next-gen AI tools designed to empower humans with interactive capabilities</p>
+    </div><!-- Animation Block -->
+<div class="group relative w-full max-w-3xl mx-auto aspect-[4/3]">
+
+  <!-- Particle Canvas -->
+  <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300">
+    <canvas id="dotParticlesCanvas"></canvas>
+  </div>
+
+  <!-- Skewed SVG PC Window -->
+  <svg class="w-full h-full opacity-40 group-hover:opacity-70 group-hover:skew-y-[12deg] group-hover:scale-75 transition duration-300 origin-center z-10 relative" viewBox="0 0 488 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2.2" y="1.6" width="484.3" height="415.4" stroke="white" />
+    <text x="16" y="30" fill="white" font-size="20" font-family="Arial, sans-serif" font-weight="bold">INDOX</text>
+    <rect x="406" y="14.8" width="45" height="15" rx="4.5" stroke="white" />
+    <circle cx="467.5" cy="22.3" r="7.5" stroke="white" />
+    <line x1="88" y1="42" x2="88" y2="418" stroke="white" />
+    <line x1="486.5" y1="42.5" x2="2.2" y2="42.5" stroke="white" />
+  </svg>
+
+  <!-- Developer Docs Scroll Area -->
+  <div class="absolute top-20 left-24 right-10 bottom-10 z-20 overflow-y-auto bg-black/40 backdrop-blur-sm rounded-md px-4 py-3 text-sm leading-relaxed space-y-2">
+    <p>• Acts as human helping human</p>
+    <p>• Real-time vision and voice understanding</p>
+    <p>• Multilingual, multimodal reasoning</p>
+    <p>• Secure, privacy-focused architecture</p>
+    <p>• Easy API integration with Uno platform</p>
+  </div>
+</div>
+
+  </div>
+</section><!-- Optional basic particle script placeholder --><script>
+// You can replace this with your own Three.js or particles.js animation
+const canvas = document.getElementById('dotParticlesCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+let particles = Array.from({ length: 80 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  r: Math.random() * 2 + 1,
+  dx: Math.random() * 2 - 1,
+  dy: Math.random() * 2 - 1,
+  color: Math.random() > 0.5 ? '#ffffff' : '#ff9933'
+}));
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particles) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
 </body>
 </html>
