@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INDOX AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+    .hero-section {
+      background: url('background.webp') no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-section relative flex justify-center items-center">
+    <div class="mt-20">
+      <!-- INDOX Outline Logo -->
+      <div style="opacity: 1; transform: none;">
+        <img 
+          alt="Outline of the word INDOX"
+          loading="lazy"
+          width="2299"
+          height="779"
+          decoding="async"
+          class="max-w-screen sm:max-w-full xl:max-w-5xl pointer-events-none select-none"
+          style="color:transparent;mask-image:linear-gradient(30deg, rgba(255,255,255,0) 15%, rgba(255,255,255, 1), rgba(255,255,255, 1))"
+          src="indox-outline.webp"
+        />
+      </div>
+
+      <!-- Input box -->
+      <div class="flex justify-center relative z-10 w-full mt-12" style="opacity: 1;">
+        <div class="w-full max-w-xl">
+          <form class="relative w-full items-center gap-3 bg-gradient-to-tr rounded-full p-px from-white/5 to-white/20">
+            <input
+              type="text"
+              class="w-full h-14 lg:h-[68px] rounded-full border-none pl-6 pr-20 focus:outline-none focus:ring-2 focus:ring-white/50 bg-black/70 text-white placeholder:text-white/50"
+              placeholder="Ask INDOX anything..."
+              name="query"
+            />
+            <div class="absolute inset-y-2 right-2 lg:right-4 flex items-center">
+              <button
+                aria-label="Submit a query to INDOX"
+                type="submit"
+                class="relative isolate inline-flex items-center justify-center border text-base/6 uppercase font-mono tracking-widest shrink-0 focus:outline-none rounded-full opacity-50 bg-white text-black border-white hover:bg-white/80 hover:border-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom AI message section -->
+  <div class="bg-black text-white px-6 py-10">
+    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-6 lg:min-h-[160px]">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 my-2">
+          <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="max-w-lg text-center lg:text-left">
+        <p class="text-sm sm:text-base font-light">We are thrilled to unveil Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Section - INDOX Toolkit -->
+  <section class="py-20 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold">INDOX AI Toolkit</h2>
+        <p class="mt-4 text-gray-400">Next-gen AI tools designed to empower humans with interactive capabilities</p>
+      </div>
+
+      <!-- Animation Block -->
+      <div class="group relative w-full max-w-3xl mx-auto aspect-[4/3]">
+
+        <!-- Particle Canvas -->
+        <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300">
+          <canvas id="dotParticlesCanvas"></canvas>
+        </div>
+
+        <!-- Skewed SVG PC Window -->
+        <svg class="w-full h-full opacity-40 group-hover:opacity-70 group-hover:skew-y-[12deg] group-hover:scale-75 transition duration-300 origin-center z-10 relative" viewBox="0 0 488 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.2" y="1.6" width="484.3" height="415.4" stroke="white" />
+          <text x="16" y="30" fill="white" font-size="20" font-family="Arial, sans-serif" font-weight="bold">INDOX</text>
+          <rect x="406" y="14.8" width="45" height="15" rx="4.5" stroke="white" />
+          <circle cx="467.5" cy="22.3" r="7.5" stroke="white" />
+          <line x1="88" y1="42" x2="88" y2="418" stroke="white" />
+          <line x1="486.5" y1="42.5" x2="2.2" y2="42.5" stroke="white" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Particle script -->
+  <script>
+    const canvas = document.getElementById('dotParticlesCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    let particles = Array.from({ length: 80 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2 + 1,
+      dx: Math.random() * 2 - 1,
+      dy: Math.random() * 2 - 1,
+      color: Math.random() > 0.5 ? '#ffffff' : '#ff9933'
+    }));
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>
