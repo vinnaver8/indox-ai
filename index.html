@@ -136,32 +136,38 @@
     </div>
   </section>
 
-  <!-- API Section (Moved to 2nd with Window SVG) -->
-  <section class="py-20 bg-black text-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold">INDOX API</h2>
-        <p class="mt-4 text-gray-400">Integrate INDOX AI into your applications with our powerful API.</p>
-      </div>
-
-      <!-- Animation Block with Window SVG -->
-      <div class="group relative w-full max-w-3xl mx-auto aspect-[4/3]">
-        <!-- Particle Canvas -->
-        <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300">
-          <canvas id="dotParticlesCanvas"></canvas>
-        </div>
-
-        <!-- Skewed SVG PC Window -->
-        <svg class="w-full h-full opacity-40 group-hover:opacity-70 group-hover:skew-y-[12deg] group-hover:scale-75 transition duration-300 origin-center z-10 relative" viewBox="0 0 488 382" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2.2" y="1.6" width="484.3" height="415.4" stroke="white" />
-          <text x="16" y="30" fill="white" font-size="20" font-family="Arial, sans-serif" font-weight="bold">INDOX</text>
-          <rect x="406" y="14.8" width="45" height="15" rx="4.5" stroke="white" />
-          <circle cx="467.5" cy="22.3" r="7.5" stroke="white" />
-          <line x1="88" y1="42" x2="88" y2="418" stroke="white" />
-          <line x1="486.5" y1="42.5" x2="2.2" y2="42.5" stroke="white" />
-        </svg>
-      </div>
+<!-- API Section (Moved to 2nd with Window SVG) -->
+<section class="py-20 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold">INDOX API</h2>
+      <p class="mt-4 text-gray-400">Integrate INDOX AI into your applications with our powerful API.</p>
     </div>
+
+    <!-- Animation Block with Window SVG -->
+    <div class="group relative w-full max-w-3xl mx-auto aspect-[4/3]">
+      <!-- Particle Canvas -->
+      <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300">
+        <canvas id="dotParticlesCanvas" style="width: 100%; height: 100%;"></canvas>
+      </div>
+
+      <!-- Skewed SVG PC Window -->
+      <svg class="w-full h-full opacity-40 group-hover:opacity-70 group-hover:skew-y-[12deg] group-hover:scale-75 transition duration-300 origin-center z-10 relative" viewBox="0 0 488 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2.2" y="1.6" width="484.3" height="415.4" stroke="white" />
+        <text x="16" y="30" fill="white" font-size="20" font-family="Arial, sans-serif" font-weight="bold">INDOX</text>
+        <rect x="406" y="14.8" width="45" height="15" rx="4.5" stroke="white" />
+        <circle cx="467.5" cy="22.3" r="7.5" stroke="white" />
+        <line x1="88" y1="42" x2="88" y2="418" stroke="white" />
+        <line x1="486.5" y1="42.5" x2="2.2" y2="42.5" stroke="white" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Add script tag at the end of body -->
+<script src="assets/js/particles.js"></script>
+</body>
+</html>
   </section>
 
 </body>
