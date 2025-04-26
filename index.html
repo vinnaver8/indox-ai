@@ -5,36 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>INDOX AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Space-dot animation */
+    body {
+      background: black;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+      background-size: 20px 20px;
+      animation: moveDots 10s linear infinite;
+    }
+    @keyframes moveDots {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(-10px, -10px);
+      }
+    }
+    .input-box {
+      background-color: black;
+    }
+  </style>
 </head>
-<body class="__variable_c1e5c9 __variable_3a0388 dark min-h-screen overflow-x-hidden bg-background font-sans text-primary antialiased">
-  <header class="fixed inset-x-0 top-0 z-50 duration-200 group">
-    <div class="pointer-events-none absolute inset-x-0 h-32 lg:h-24 duration-200 bg-gradient-to-b from-black lg:from-black/75 opacity-0"></div>
-    <div class="hidden lg:block fixed inset-x-0 top-0 bg-background/25 backdrop-blur pointer-events-none opacity-0 lg:pt-20">
-      <div class="border-y border-primary/10 h-full py-4">
-        <div class="mx-auto w-full px-6 xl:max-w-7xl relative">
-          <div class="flex gap-1.5 -mx-3"></div>
-        </div>
-      </div>
-    </div>
+<body class="dark min-h-screen overflow-x-hidden font-sans text-primary antialiased">
+  <header class="fixed inset-x-0 top-0 z-50">
+    <!-- Header content -->
   </header>
 
   <div class="relative h-svh w-full border-b border-border pb-px overflow-hidden md:overflow-x-hidden">
     <div class="relative w-full h-full">
       <div class="mx-auto w-full px-6 xl:max-w-7xl flex h-full flex-col">
-        <div class="absolute -inset-y-[25%] -right-24 flex w-[100vw] flex-col xl:-right-6 xl:w-[1200px]" style="mask-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255)); opacity: 1;">
-          <div class="flex flex-col w-full h-full blur">
-            <div class="grow" style="background: conic-gradient(from 180deg at 99% 40%, rgb(255, 255, 255) 18deg, rgb(255, 208, 134) 36deg, rgba(17, 17, 17, 0) 90deg, rgba(17, 17, 17, 0) 342deg, rgb(255, 208, 134) 360deg);"></div>
-            <div class="grow" style="background: conic-gradient(from 0deg at 99% 60%, rgb(255, 255, 255) 0deg, rgba(17, 17, 17, 0) 18deg, rgba(17, 17, 17, 0) 270deg, rgb(255, 208, 134) 324deg, rgb(255, 208, 134) 360deg);"></div>
-          </div>
-          <canvas class="absolute inset-0 h-full w-full" width="400" height="1056"></canvas>
-        </div>
         <div class="relative w-full flex grow items-center justify-start z-20">
           <div class="space-y-16">
             <div>
               <div class="absolute inset-0 top-20 flex justify-center items-center grow">
                 <div>
                   <div style="opacity: 1; transform: none;">
-                    <img alt="Outline of the word Grok" loading="lazy" width="2299" height="779" decoding="async" data-nimg="1" class="max-w-screen sm:max-w-full xl:max-w-5xl pointer-events-none select-none" src="assets/indox-outline.webp" />
+                    <img alt="SVG Image" src="path-to-your-svg.svg"
+                      class="max-w-full h-auto sm:max-w-screen-md" />
                   </div>
                 </div>
               </div>
@@ -46,14 +63,14 @@
   </div>
 
   <!-- Input box -->
-  <div class="flex justify-center relative z-10 w-full mt-12" style="opacity: 1;">
+  <div class="flex justify-center relative z-10 w-full mt-12">
     <div class="w-full max-w-xl">
-      <form class="relative w-full items-center gap-3 bg-gradient-to-tr rounded-full p-px from-primary/5 to-primary/20">
-        <input type="text" class="w-full h-14 lg:h-[68px] rounded-full border-none pl-6 pr-20 focus:outline-none focus:ring-2 focus:ring-white/50 bg-background text-primary placeholder:text-primary/50" placeholder="Type your query" />
+      <form class="relative w-full items-center gap-3 rounded-full p-px">
+        <input type="text" class="input-box w-full h-14 lg:h-[68px] rounded-full border-none pl-6 pr-20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder:text-gray-400" placeholder="Type here..." />
         <div class="absolute inset-y-2 right-2 lg:right-4 flex items-center">
-          <button aria-label="Submit a query to Grok" type="submit" class="relative isolate inline-flex items-center justify-center border text-base uppercase font-mono tracking-widest shrink-0 focus:outline-none focus:ring-2 focus:ring-primary/50">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="!size-4">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" />
+          <button aria-label="Submit a query" type="submit" class="relative isolate inline-flex items-center justify-center border text-base uppercase font-mono tracking-widest shrink-0 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="!size-4">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06z"></path>
             </svg>
           </button>
         </div>
@@ -61,7 +78,7 @@
     </div>
   </div>
 
-  <!-- Add script tag at the end of body -->
+  <!-- Add particles.js for animation -->
   <script src="assets/js/particles.js"></script>
 </body>
 </html>
