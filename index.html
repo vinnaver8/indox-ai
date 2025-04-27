@@ -15,14 +15,15 @@
   
   <header class="fixed inset-x-0 top-0 z-50 duration-200 group -translate-y-0">
     <!-- Gradient Background (hidden with opacity 0 initially) -->
-    <div class="pointer-events-none absolute inset-x-0 h-32 lg:h-24 duration-200 bg-gradient-to-b from-black lg:from-black/75 opacity-0"></div>
-    
-    <!-- Header Content (visible only on large screens) -->
-    <div class="hidden lg:block fixed inset-x-0 top-0 bg-background/25 backdrop-blur pointer-events-none opacity-0 lg:pt-20">
+    <div class="pointer-events-none absolute inset-x-0 h-32 lg:h-24 duration-200 bg-gradient-to-b from-black lg:from-black/75 opacity-100" style="mask: linear-gradient(black, black, transparent); backdrop-filter: blur(8px);"></div>
+    <div class="
+          hidden lg:block
+          fixed inset-x-0 top-0 bg-background/25 backdrop-blur
+          pointer-events-none opacity-0 
+          lg:pt-16">
       <div class="border-y border-primary/10 h-full py-4">
         <div class="mx-auto w-full px-6 xl:max-w-7xl relative">
           <div class="flex gap-1.5 -mx-3">
-            <!-- Add any content here for header -->
           </div>
         </div>
       </div>
