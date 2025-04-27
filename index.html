@@ -40,8 +40,7 @@
                 <canvas class="absolute inset-0 h-full w-full" width="1023" height="2709"></canvas>
             </div>
             <div class="relative w-full flex grow items-center justify-start z-20">
-                <div class="space-y-16">
-                    <div>
+                <div class="space-y-16"><div>
                         <div class="absolute inset-0 top-20 flex justify-center items-center grow">
                             <div>
                                 <div style="opacity: 1; transform: none;">
@@ -51,7 +50,7 @@
                                 <div class="flex justify-center relative z-10 w-full mt-12" style="opacity: 1;">
                                     <div class="w-full max-w-xl">
                                         <form class="relative w-full items-center gap-3 bg-gradient-to-tr rounded-full p-px from-primary/5 to-primary/20">
-                                          <input type="text" class="w-full h-14 lg:h-[68px] rounded-full border-none pl-6 pr-20 focus:outline-none focus:ring-2 focus:ring-white/50 bg-background text-primary placeholder:text-primary/50" placeholder="Ask Grok anything..." name="query" value="">
+                                          <input type="text" class="w-full h-14 lg:h-[68px] rounded-full border-none pl-6 pr-20 focus:outline-none focus:ring-2 focus:ring-white/50 bg-background text-primary placeholder:text-primary/50" placeholder="Ask indox anything..." name="query" value="">
                                             <div class="absolute inset-y-2 right-2 lg:right-4 flex items-center">
                                                 <button aria-label="Submit a query to Grok" type="submit" class="relative isolate inline-flex items-center justify-center border text-base/6 uppercase font-mono tracking-widest shrink-0 focus:outline-none data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-blue-500 data-[disabled]:opacity-50 [&>[data-slot=icon]]:-mx-0.5 [&>[data-slot=icon]]:my-0.5 [&>[data-slot=icon]]:shrink-0 [&>[data-slot=icon]]:sm:my-1 aspect-square px-3.5 py-1.5 sm:text-sm [&>[data-slot=icon]]:size-4 [&>[data-slot=icon]]:sm:size-3 gap-x-2 bg-[--btn-bg] text-[--btn-text] border-[--btn-border] hover:bg-[--btn-hover] hover:border-[--btn-hover] rounded-full [--btn-bg:theme(colors.primary)] [--btn-border:theme(colors.primary)] [--btn-text:theme(colors.background)] [--btn-hover:theme(colors.primary/80%)] opacity-50">
                                                     <span class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 [@media(pointer:fine)]:hidden" aria-hidden="true"></span>
@@ -80,12 +79,17 @@
 <div class="hidden sm:block">We are thrilled to unveil Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.</div>
 </div>
 <!-- Grok Section -->
+<div class="flex flex-col gap-3 sm:flex-row">
+  <a class="relative isolate inline-flex items-center justify-center border text-base/6 uppercase font-mono tracking-widest shrink-0 focus:outline-none data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-blue-500 data-[disabled]:opacity-50 [&amp;>[data-slot=icon]]:-mx-0.5 [&amp;>[data-slot=icon]]:my-0.5 [&amp;>[data-slot=icon]]:shrink-0 [&amp;>[data-slot=icon]]:sm:my-1 px-4 py-2 sm:text-sm [&amp;>[data-slot=icon]]:size-5 [&amp;>[data-slot=icon]]:sm:size-4 gap-x-3 bg-[--btn-bg] text-[--btn-text] border-[--btn-border] hover:bg-[--btn-hover] rounded-full [--btn-bg:transparent] [--btn-border:theme(colors.primary/25%)] [--btn-text:theme(colors.primary)] [--btn-hover:theme(colors.secondary/20%)] hidden lg:flex" href="/api">
+    <span class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 [@media(pointer:fine)]:hidden" aria-hidden="true"></span>
+    <span>Build with Grok</span></a><a class="relative isolate inline-flex items-center justify-center border text-base/6 uppercase font-mono tracking-widest shrink-0 focus:outline-none data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-blue-500 data-[disabled]:opacity-50 [&amp;>[data-slot=icon]]:-mx-0.5 [&amp;>[data-slot=icon]]:my-0.5 [&amp;>[data-slot=icon]]:shrink-0 [&amp;>[data-slot=icon]]:sm:my-1 px-4 py-2 sm:text-sm [&amp;>[data-slot=icon]]:size-5 [&amp;>[data-slot=icon]]:sm:size-4 gap-x-3 bg-[--btn-bg] text-[--btn-text] border-[--btn-border] hover:bg-[--btn-hover] rounded-full [--btn-bg:transparent] [--btn-border:theme(colors.primary/25%)] [--btn-text:theme(colors.primary)] [--btn-hover:theme(colors.secondary/20%)]" href="/news/grok-3">
+      <span class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 [@media(pointer:fine)]:hidden" aria-hidden="true"></span>
+      <span>Learn more</span></a></div></div></div></div></div></div>
 <section class="py-16 sm:py-32">
 <div class="mx-auto w-full px-6 xl:max-w-7xl space-y-16 sm:space-y-32">
 <div class="space-y-12">
 <div>
-<div class="mono-tag flex items-center gap-2 text-sm"><span>[</span> <span>Products</span> <span>]</span></div>
-        </div>
+<div class="mono-tag flex items-center gap-2 text-sm"><span>[</span> <span>Products</span> <span>]</span></div></div>
         <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div class="max-w-xl space-y-12">
             <h2 class="text-balance text-3xl md:text-4xl lg:text-5xl tracking-tight">AI for all humanity</h2>
@@ -99,10 +103,11 @@
             <div class="absolute translate-x-px -translate-y-px -right-1 -top-1 size-2 bg-primary z-10"></div>
             <div class="absolute -translate-x-px translate-y-px -left-1 -bottom-1 size-2 bg-primary z-10"></div>
             <div class="absolute translate-x-px translate-y-px -right-1 -bottom-1 size-2 bg-primary z-10"></div>
-          </div></div></div>
+          </div>
+          <div class="max-w-sm"><a target="_blank" href="#">
           <div class="absolute inset-0"></div>
-          <h3 class="text-xl">INDOX</h3>
-          <p class="mt-4 text-secondary">Your gateway to next-gen AI APIs, crafted for developers and creative minds.</p>
+          <h3 class="text-xl">INDOX</h3></a>
+          <p class="mt-4 text-secondary">Your gateway to next-gen AI APIs, crafted for developers and creative minds.</p></div>
           <!-- SVG Side -->
           <div class="flex-1 flex flex-col">
             <div class="opacity-75 flex-1 pointer-events-none">
