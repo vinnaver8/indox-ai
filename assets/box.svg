@@ -1,0 +1,13 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="black"/>
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <!-- Vertical lines -->
+    <line x1="480" y1="0" x2="480" y2="1080"/>
+    <line x1="960" y1="0" x2="960" y2="1080"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080"/>
+    <!-- Horizontal lines -->
+    <line x1="0" y1="270" x2="1920" y2="270"/>
+    <line x1="0" y1="540" x2="1920" y2="540"/>
+    <line x1="0" y1="810" x2="1920" y2="810"/>
+  </g>
+</svg>
