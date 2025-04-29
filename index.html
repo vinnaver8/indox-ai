@@ -152,13 +152,21 @@
 <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path></svg></button></div></div></div></div></div></section>
 <!-- Add script tag at the end of body -->
 <script>
-document.addEventListener('mousemove', function(e) {
+function updateMask(x, y) {
   const root = document.documentElement;
-  root.style.setProperty('--hero-mask-x', e.clientX + 'px');
-  root.style.setProperty('--hero-mask-y', e.clientY + 'px');
+  root.style.setProperty('--hero-mask-x', x + 'px');
+  root.style.setProperty('--hero-mask-y', y + 'px');
+}
+
+document.addEventListener('mousemove', function (e) {
+  updateMask(e.clientX, e.clientY);
 });
- </script>         
-<script src="assets/js/particles.js"></script>
+
+document.addEventListener('touchmove', function (e) {
+  const touch = e.touches[0];
+  updateMask(touch.clientX, touch.clientY);
+});
+</script>
 </body>
 </html>
 
